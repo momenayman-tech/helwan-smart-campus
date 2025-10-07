@@ -1,0 +1,26 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* RTL direction and basic theming */
+:root {
+  --primary: #0b5fff; /* academic blue */
+  --muted: #f3f4f6;
+}
+html, body, #root { height: 100%; }
+body {
+  @apply bg-white text-gray-800 font-sans;
+  direction: rtl;
+  font-family: 'Cairo', Tahoma, Arial, sans-serif;
+  background-image: url('/assets/helwan-logo-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  background-attachment: fixed;
+  background-color: white;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+.card { @apply bg-white shadow-md rounded-xl p-4; }
+.header { @apply flex items-center justify-between mb-6; }
+.logo { @apply text-xl font-bold; color: var(--primary); }

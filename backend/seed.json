@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "name": "Demo Student",
+      "email": "student@example.com",
+      "role": "student",
+      "studentId": "2025001",
+      "faculty": "حاسبات ومعلومات"
+    },
+    {
+      "name": "Demo Lecturer",
+      "email": "lecturer@example.com",
+      "role": "lecturer",
+      "studentId": "",
+      "faculty": "حاسبات ومعلومات"
+    }
+  ],
+  "courses": [
+    {
+      "code": "CS101",
+      "title": "مقدمة في البرمجة",
+      "faculty": "حاسبات ومعلومات",
+      "department": "علوم الحاسب"
+    }
+  ]
+}

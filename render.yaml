@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: helwan-backend
+    env: node
+    branch: main
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    root: backend
+    envVars:
+      - key: MONGO_URI
+        from: env
+      - key: JWT_SECRET
+        from: env
+
+  - type: static
+    name: helwan-frontend
+    env: static
+    branch: main
+    plan: free
+    buildCommand: cd frontend && npm install && npm run build
+    publishPath: frontend/dist
+    root: .
+    envVars:
+      - key: VITE_API_URL
+        from: env
