@@ -1,9 +1,12 @@
 [build]
-  root = "backend"
-  builder = "NIXPACKS"
+builder = "NIXPACKS"
+buildCommand = "npm install"
+startCommand = "npm start"
 
 [deploy]
-  startCommand = "npm start"
+healthcheckPath = "/"
+restartPolicyType = "ON_FAILURE"
 
 [env]
-  NIXPACKS_NODE_VERSION = "18"
+NODE_ENV = "production"
+NIXPACKS_NODE_VERSION = "18"
