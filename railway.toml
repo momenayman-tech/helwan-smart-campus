@@ -1,14 +1,6 @@
 [build]
 builder = "NIXPACKS"
-buildCommand = "npm install"
-
-[start]
-command = "npm start"
+buildCommand = "cd backend && npm install"
 
 [deploy]
-healthcheckPath = "/"
-healthcheckTimeout = 100
-restartPolicyType = "ON_FAILURE"
-
-[env]
-NODE_VERSION = "18"
+startCommand = "cd backend && npm start"
